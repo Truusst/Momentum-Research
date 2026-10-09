@@ -8,7 +8,6 @@ tickers = ['SPY', 'XLK', 'XLF', 'XLE', 'XLV', 'XLI', 'XLY', 'XLP', 'XLU', 'XLB',
 raw = yf.download(tickers, start="2010-01-01", auto_adjust=True)
 
 prices = raw['Close'].dropna(how='all')
-print(prices[prices.isna().any(axis=1)])
 
 
 import os
