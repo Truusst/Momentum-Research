@@ -1,3 +1,4 @@
+#Data collection script
 #Prices are adjusted for dividends and splits. Data is downloaded from Yahoo Finance using the yfinance library.
 #Missing values are dropped only if all values in row are missing. The data is saved as a CSV file in the data directory.
 import yfinance as yf
