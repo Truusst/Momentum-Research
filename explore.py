@@ -68,10 +68,10 @@ pair_row = corr_no_diag[pair_col].idxmax()      # row of the max within that col
 max_corr = corr_no_diag[pair_col].max()
 
 print(f"Highest correlation: {pair_row} and {pair_col}, {max_corr:.2f}")
-#The two ETFs with the highest correlation are XLF and SPY, with a correlation coefficient of 0.95.
+#The two ETFs with the highest correlation are XLK and SPY, with a correlation coefficient of 0.92.
 
 print(corr['SPY'].sort_values(ascending=True))
-#The ETF with the lowest correlation with SPY is TLT, with a correlation coefficient of -0.12. This indicates that TLT tends to move in the opposite direction of SPY, which is consistent with the fact that TLT is a bond ETF and bonds often have an inverse relationship with stocks.
+#The ETF with the lowest correlation with SPY is TLT, with a correlation coefficient of -0.28. This indicates that TLT tends to move in the opposite direction of SPY, which is consistent with the fact that TLT is a bond ETF and bonds often have an inverse relationship with stocks.
 
 #The strategy ranks ETFs on returns, so it only adds value when the winners and losers actually behave differently. 
 #Most of these ETFs are highly correlated with SPY (around 0.5-0.9), largely because the sector ETFs are slices of the S&P 500, so in most months the ranking is choosing between assets that move together. 
