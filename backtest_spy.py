@@ -67,7 +67,7 @@ print(v2_summary_table)
 StrategyV2_return_over_risk = v2_summary_table.loc["Annualised return", "v2"]/v2_summary_table.loc["Annualised volatility", "v2"]
 spy_return_over_risk = v2_summary_table.loc["Annualised return", "SPY"]/v2_summary_table.loc["Annualised volatility", "SPY"]
 print(StrategyV2_return_over_risk, spy_return_over_risk)
-#The strategy has a higher return/risk value than spy (0.94 compared to 0.89) indicating its lower retunr is compensated by its lower risk as the values are close.
+#The strategy has a return/risk similar value than spy (0.94 compared to 0.89) indicating its lower return is compensated by its lower risk as the values are close.
 
 
 #with 200, the final growth of V2 was 5.19
@@ -75,5 +75,4 @@ print(StrategyV2_return_over_risk, spy_return_over_risk)
 #with 100, the final growth of V2 was 4.57
 #with 50, the final growth of V2 was 3.11
 #appears to decrease with lower values for the rolling window with return/risk also decreasing
-
-
+#number of switches also increases as the rolling window decreases so a cost of switching could impact the overall profit
