@@ -44,5 +44,11 @@ table = pd.DataFrame({"0": summary(run_backtest(signal, spy_returns)),
                       "10": summary(run_backtest(signal, spy_returns, cost=10*0.0001)),
                       "20": summary(run_backtest(signal, spy_returns, cost=20*0.0001)),})
 print(table)
-#With an increase in bps, it is clear that annualised return and CAGR decrease. This is clearly due to cost of entering and exiting
+#With an increase in bps, it is clear that annualised return and CAGR decrease. This is clearly due to cost of entering and exiting.
+
+#Comparing our summary of the SPY with our strategy with 20 bps now gives a different picture as sharpe ratio is now less than 
+#SPY (SPY’s Sharpe over this period is 0.86, and the strategy’s goes from 0.94 at 0 bps to 0.85 at 20 bps).
+#which doesnt in itself tell us if its a significant difference however its clear its decrease from its original value.
+#However the strategy still has an edge on Drawdowns (SPY: -0.33 Strategy: -0.23) and Annualised volatility (SPY: 0.17 strategy: 0.12)
+
 #This tells me that with a strategy that trades more often, if the bp>0, it will have worse CAGR, sharpe ratio and Drawdown
