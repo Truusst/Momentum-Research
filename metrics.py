@@ -1,3 +1,4 @@
+#library of metric functions
 import pandas as pd
 
 def growth_of_one(returns):

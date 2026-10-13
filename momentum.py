@@ -4,7 +4,7 @@ from backtester import run_backtest
 prices = pd.read_csv("data/prices.csv", index_col=0, parse_dates=True)
 
 def momentum_strategy(prices, lookback=12, top_n=3):
-    ""
+    "Build daily portfolio weights for a cross-sectional momentum strategy."
     dates = prices.index.to_series()
     month_end_dates = dates.groupby(prices.index.to_period("M")).max()
     monthly_prices = prices.loc[month_end_dates]

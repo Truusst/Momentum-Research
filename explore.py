@@ -88,4 +88,4 @@ print(abs(march_from_monthly - march_from_daily).max().max()) #check that the mo
 past_12m = prices.resample('ME').last().pct_change(12).dropna(how='all')
 most_recent_ranking = past_12m.iloc[-2].sort_values(ascending=False) #-2 iloc because the last row is incomplete. 
 print(most_recent_ranking)
-#The strategy wouldve held the following 3 ETFs in the most recent complete month: XLE, XLK, and XLF.
+#The strategy wouldve held the following 3 ETFs in the most recent complete month: XLE, XLK, and EEM.
