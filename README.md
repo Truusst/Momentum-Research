@@ -19,6 +19,16 @@ risk-adjusted basis across 15 US sector and cross-asset ETFs (2010–present)?
    when low-correlation assets like TLT and GLD rank highly.
 3. Results may depend heavily on a few key periods.
 
+## Hypotheses: outcome
+1. **Partly supported.** Beta is 0.63 and R² is 0.48: the strategy carries clearly less
+   market exposure than SPY, as it periodically rotates into less correlated assets.
+2. **Partly supported.** It limited losses in some downturns (max drawdown −22% vs −34%,
+   and much better in 2022), but had its own long drawdowns in 2011–2013 and 2016–2017,
+   and produced no overall edge (Sharpe 0.73 vs 0.86; alpha not significant). Its 2022
+   protection came partly from energy, not bonds.
+3. **Provisionally supported.** The main differences from SPY are concentrated in a few
+   periods; tested formally in Phase 6.
+
 ## Strategy
 At each month-end (last trading day), rank the 15 ETFs by their
 12-month return and hold the top 3 in equal weights until the next
