@@ -90,11 +90,11 @@ hold the top 3 in equal weights until the next month-end.
 - Past performance does not guarantee future results.
 
 ## How to run
-'''
+```
 pip install -r requirements.txt
-python data.py # download price data
-python -m pytest # run the tests
-'''
+python data.py
+python -m pytest
+```
 Then open `research.ipynb` (main analysis) and `robustness.ipynb` (robustness checks).
 
 ## Project structure
