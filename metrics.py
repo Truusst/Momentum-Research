@@ -34,8 +34,9 @@ def summary(returns):
                             "Annualised Volatility": annualised_volatility(returns),
                             "CAGR": cagr(returns),
                             "Sharpe ratio": sharpe_ratio(returns),
-                            "Max Drawdwon": max_drawdown(returns)})
+                            "Max Drawdown": max_drawdown(returns)})
     return summary
+
 
 
 

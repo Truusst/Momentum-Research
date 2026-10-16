@@ -50,6 +50,20 @@ trading costs are charged on turnover.
 
 ![Momentum vs SPY](figures/momentum_12m_top3_10bps_vs_spy.png)
 
+## Robustness checks
+- **Parameter sweep:** Sharpe ratios ranged from 0.40 to 0.87 across 12 settings; only
+  one narrowly beat SPY (0.86). Holding more ETFs consistently improved results.
+- **Out-of-sample:** the best 2011–2018 setting ranked 5th of 12 from 2019 onwards, below
+  SPY, so choosing settings from past performance was unreliable.
+- **Sub-periods:** the strategy beat SPY in only 4 of 16 years; gains were concentrated
+  in difficult markets, especially 2022.
+- **Costs:** the best settings' advantage over SPY disappeared at around 6–12 bps.
+- **Execution timing and robust standard errors** did not change the conclusions.
+
+![Sharpe ratio by setting](figures/sharpe_sweep_heatmap.png)
+![Yearly difference vs SPY](figures/yearly_difference_vs_spy.png)
+![Sharpe ratio vs trading cost](figures/sharpe_vs_cost.png)
+
 ## Project structure
 - `data.py`: downloads and cleans price data
 - `explore.py`: summary statistics, growth and correlation charts
@@ -64,5 +78,4 @@ trading costs are charged on turnover.
 - `figures/`: saved charts
 
 ## Status
-In progress: momentum strategy evaluated against SPY; robustness
-testing (parameter sweeps, out-of-sample tests, significance) next.
+Analysis complete (Phases 1–6). Final polish of code and documentation in progress.
