@@ -6,11 +6,12 @@ import pandas as pd
 
 tickers = ['SPY', 'XLK', 'XLF', 'XLE', 'XLV', 'XLI', 'XLY', 'XLP', 'XLU', 'XLB', 'TLT', 'GLD', 'EFA', 'EEM', 'IWM']
 
-raw = yf.download(tickers, start="2010-01-01", auto_adjust=True)
+raw = yf.download(tickers, start="2010-01-01", end="2026-10-08", auto_adjust=True) #end date is set to date this project started to keep consistency in analysis notes. However can but adjusted to be live
 
 prices = raw['Close'].dropna(how='all')
-
+prices_open = raw['Open'].dropna(how='all')
 
 import os
 os.makedirs('data', exist_ok=True)
 prices.to_csv('data/prices.csv')
+prices_open.to_csv('data/open.csv')
